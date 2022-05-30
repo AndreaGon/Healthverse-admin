@@ -7,17 +7,17 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import {MaterialModule} from './shared/material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminModule } from './features/admin/admin.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    CoreModule,
     SharedModule,
+    CoreModule,
     MaterialModule,
+    AdminModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
