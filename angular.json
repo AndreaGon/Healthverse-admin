@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "healthverse-admin:build:production",
+            "firebaseProject": "health-verse-a89f6",
+            "firebaseHostingSite": "health-verse-a89f6"
+          }
         }
       }
     }

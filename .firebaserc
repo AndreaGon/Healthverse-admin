@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "health-verse-a89f6": {
+      "hosting": {
+        "healthverse-admin": [
+          "health-verse-a89f6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "health-verse-a89f6"
+  }
+}
