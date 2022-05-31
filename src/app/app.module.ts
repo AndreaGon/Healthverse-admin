@@ -10,8 +10,6 @@ import {MaterialModule} from './shared/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminModule } from './features/admin/admin.module';
 
-import { environment } from 'src/environments/environment';
-
 
 @NgModule({
   declarations: [AppComponent],
