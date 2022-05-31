@@ -1,3 +1,9 @@
-<div>
-    <router-outlet></router-outlet>
+<div class="main-container">
+    <div class="nav-container" *ngIf = "isAuthenticated">
+        <app-side-nav></app-side-nav>
+    </div>
+    <div class="page-container">
+        <router-outlet></router-outlet>
+    </div>
 </div>
+

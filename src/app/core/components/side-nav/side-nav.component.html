@@ -1,1 +1,6 @@
-<p>side-nav works!</p>
+<h1 class="company-name">Healthverse by Tween</h1>
+<div class="nav-link-container" *ngFor="let link of routeLinks">
+    <div class="nav-link" [class.active]="activelink.isActive">
+        <a routerLink="{{link.path}}" routerLinkActive="active" #activelink="routerLinkActive">{{link.pagename}}</a>
+    </div>
+</div>
