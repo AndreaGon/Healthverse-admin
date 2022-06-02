@@ -1,12 +1,12 @@
 <div class="login-container">
     <div class="login-text-container">
         <h1 class="login-header">Health Verse Login</h1>
-        <form>
-            <input type="text" class="username" placeholder="Username"/>
+        <form [formGroup]="loginForm">
+            <input type="text" class="username" placeholder="Username" formControlName = "username"/>
 
-            <input type="password" class="password" placeholder="Password"/>
+            <input type="password" class="password" placeholder="Password" formControlName = "password"/>
 
-            <button mat-raised-button color="primary" class="login-button material-button">Login</button>
+            <button mat-raised-button color="primary" class="login-button material-button" (click)="onSubmit()">Login</button>
         </form>
     </div>
 

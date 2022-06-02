@@ -1,5 +1,5 @@
 <div class="main-container">
-    <div class="nav-container" *ngIf = "isAuthenticated">
+    <div class="nav-container" *ngIf="currentRoute != '/login'">
         <app-side-nav></app-side-nav>
     </div>
     <div class="page-container">

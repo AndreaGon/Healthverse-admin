@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -12,9 +13,15 @@ export class SideNavComponent implements OnInit {
     {path: "/login", pagename: "Logout"}
   ];
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  logOut(){
+    this.authService.logout();
   }
 
 }
