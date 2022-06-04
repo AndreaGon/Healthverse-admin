@@ -6,12 +6,8 @@
     <button mat-raised-button color="primary" class="new-button" (click) = "openNewPostDialog()">+ New Post</button>
 </div>
 <div class="post-container">
-    <mat-card class="post-content">
-        <h2>Title</h2>
-        <p>Content</p>
-    </mat-card>
-    <mat-card class="post-content">
-        <h2>Title</h2>
-        <p>Content</p>
+    <mat-card class="post-content" *ngFor="let tip of adminData">
+        <h2>{{tip.title}}</h2>
+        <p>{{tip.notif_content}}</p>
     </mat-card>
 </div>
