@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -7,21 +7,16 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./side-nav.component.sass']
 })
 export class SideNavComponent implements OnInit {
-
   routeLinks: any = [
-    {path: "/", pagename: "Create Content"},
-    {path: "/login", pagename: "Logout"}
+    { path: '/', pagename: 'Create Content' },
+    { path: '/login', pagename: 'Logout' }
   ];
 
-  constructor(
-    private authService: AuthService
-  ) { }
+  constructor(private authService: AuthService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  logOut(){
+  logOut() {
     this.authService.logout();
   }
-
 }

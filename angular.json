@@ -115,9 +115,52 @@
             "firebaseProject": "health-verse-a89f6",
             "firebaseHostingSite": "health-verse-a89f6"
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "healthverse-admin:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "healthverse-admin:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "healthverse-admin:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "healthverse-admin:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "healthverse-admin"
+  "defaultProject": "healthverse-admin",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

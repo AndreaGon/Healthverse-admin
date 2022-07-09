@@ -8,21 +8,16 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent implements OnInit {
+  constructor(private authService: AuthService) {}
 
-  constructor(
-    private authService: AuthService
-  ) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   loginForm = new FormGroup({
     username: new FormControl(''),
     password: new FormControl('')
   });
 
-  onSubmit(){
+  onSubmit() {
     this.authService.authUser(this.loginForm.value);
   }
-
 }

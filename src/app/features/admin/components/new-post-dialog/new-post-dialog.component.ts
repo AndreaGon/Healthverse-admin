@@ -9,27 +9,22 @@ import { AdminService } from 'src/app/core/services/admin.service';
   styleUrls: ['./new-post-dialog.component.sass']
 })
 export class NewPostDialogComponent implements OnInit {
-
   constructor(
     public dialogRef: MatDialogRef<NewPostDialogComponent>,
     private adminService: AdminService
-  ) { }
-  
+  ) {}
+
   contentForm = new FormGroup({
-    title: new FormControl(""),
-    content: new FormControl("")
-  })
+    title: new FormControl(''),
+    content: new FormControl('')
+  });
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  cancelAction(){
+  cancelAction() {}
 
-  }
-
-  postContent(){
+  postContent() {
     this.adminService.addNewData(this.contentForm);
     this.dialogRef.close();
   }
-
 }

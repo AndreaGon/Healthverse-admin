@@ -9,25 +9,19 @@ import { NewPostDialogComponent } from '../../components/new-post-dialog/new-pos
   styleUrls: ['./healthtips.component.sass']
 })
 export class HealthtipsComponent implements OnInit {
-
   adminData: any;
 
-  constructor(
-    public dialog: MatDialog,
-    private admin: AdminService
-    ) { }
+  constructor(public dialog: MatDialog, private admin: AdminService) {}
 
   ngOnInit(): void {
-    this.admin.getAll()?.subscribe((res)=>{
+    this.admin.getAll()?.subscribe((res) => {
       this.adminData = res;
-    })
+    });
   }
 
-
-  openNewPostDialog(): void{
+  openNewPostDialog(): void {
     const dialogRef = this.dialog.open(NewPostDialogComponent, {
       width: '450px'
-    })
+    });
   }
-
 }

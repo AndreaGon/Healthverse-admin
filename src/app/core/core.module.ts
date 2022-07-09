@@ -7,11 +7,8 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    SideNavComponent
-  ],
+  declarations: [LoginComponent, SideNavComponent],
   imports: [CommonModule, SharedModule, MaterialModule, RouterModule],
   exports: [LoginComponent, SideNavComponent]
 })
-export class CoreModule { }
+export class CoreModule {}

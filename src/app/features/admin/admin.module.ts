@@ -9,4 +9,4 @@ import { NewPostDialogComponent } from './components/new-post-dialog/new-post-di
   declarations: [HealthtipsComponent, NewPostDialogComponent],
   imports: [CommonModule, AdminRoutingModule, SharedModule]
 })
-export class AdminModule { }
+export class AdminModule {}

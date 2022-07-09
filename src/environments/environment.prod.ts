@@ -7,7 +7,7 @@ export const environment = {
     apiKey: 'AIzaSyDO9IyEqmBVv12P3DNgX_j0X1kiWExSGK4',
     authDomain: 'health-verse-a89f6.firebaseapp.com',
     messagingSenderId: '530694555942',
-    measurementId: 'G-B856Z16B61',
+    measurementId: 'G-B856Z16B61'
   },
   production: true
 };
