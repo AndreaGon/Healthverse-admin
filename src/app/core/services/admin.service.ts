@@ -11,7 +11,7 @@ import * as uuid from 'uuid';
 export class AdminService {
   constructor(private firestore: Firestore) {}
 
-  currentDate = new Date();
+  currentDate = new Date(Date.now());
 
   col: any = collection(this.firestore, 'Admin_notif');
   adminData: Observable<AdminNotif[]> | undefined = collectionData(this.col);
@@ -28,7 +28,7 @@ export class AdminService {
       id: docId,
       title: data.get('title').value,
       notif_content: data.get('content').value,
-      timestamp: this.currentDate.getUTCDate()
+      timestamp: this.currentDate
     });
   }
 
