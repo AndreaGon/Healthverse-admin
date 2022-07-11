@@ -24,4 +24,8 @@ export class HealthtipsComponent implements OnInit {
       width: '450px'
     });
   }
+
+  deletePost(id: number): void {
+    this.admin.deleteData(id);
+  }
 }
