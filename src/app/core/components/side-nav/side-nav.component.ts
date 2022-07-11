@@ -8,8 +8,8 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SideNavComponent implements OnInit {
   routeLinks: any = [
-    { path: '/', pagename: 'Create Content' },
-    { path: '/login', pagename: 'Logout' }
+    { path: '/', pagename: 'Create Content', id: 0 },
+    { path: '/login', pagename: 'Logout', id: 1 }
   ];
 
   constructor(private authService: AuthService) {}
