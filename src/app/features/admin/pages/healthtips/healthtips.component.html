@@ -1,6 +1,6 @@
 <div class="greetings-container">
     <h1 class="greetings">Hello, Matthew!</h1>
-    <p>Here, you can share helthtips to users.</p>
+    <p>Here, you can share healthtips to users.</p>
 </div>
 <div class="action-buttons">
     <button mat-raised-button color="primary" class="new-button" (click) = "openNewPostDialog()">+ New Post</button>
@@ -9,5 +9,6 @@
     <mat-card class="post-content" *ngFor="let tip of adminData">
         <h2>{{tip.title}}</h2>
         <p>{{tip.notif_content}}</p>
+        <button mat-raised-button color="primary" class="delete-button" (click) = "deletePost(tip.id)">- Delete Post</button>
     </mat-card>
 </div>

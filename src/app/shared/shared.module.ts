@@ -9,4 +9,4 @@ import { MaterialModule } from './material.module';
   imports: [RouterModule, CommonModule],
   exports: [FormsModule, ReactiveFormsModule, MaterialModule]
 })
-export class SharedModule { }
+export class SharedModule {}

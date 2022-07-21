@@ -7,31 +7,27 @@ import { BehaviorSubject, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-
-  constructor(
-    private router: Router
-  ) { }
+  constructor(private router: Router) {}
 
   private isLoggedIn = new BehaviorSubject<boolean>(false);
 
-  getAuthStatus(){
+  getAuthStatus() {
     return this.isLoggedIn.value;
   }
 
-  authUser(creds: any){
-    if (creds.username == "admin" && creds.password == "admin") {
+  authUser(creds: any) {
+    if (creds.username == 'admin' && creds.password == 'admin') {
       this.login();
     }
   }
 
-  login(){
+  login() {
     this.isLoggedIn.next(true);
     this.router.navigate(['/']);
   }
 
-  logout(){
+  logout() {
     this.isLoggedIn.next(false);
     this.router.navigate(['login']);
   }
-
 }
